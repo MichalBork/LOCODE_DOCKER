@@ -18,7 +18,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 
 RUN curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php && php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
-ADD ./install.sh /var/www/symfony/install.sh
-RUN chmod 777 /var/www/symfony/install.sh
+
 
 WORKDIR /var/www/symfony/LOCODE_REST_API
