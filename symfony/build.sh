@@ -1,5 +1,4 @@
 #!/bin/sh
-rm -rf ./LOCODE_REST_API &&
 git clone https://github.com/MichalBork/LOCODE_REST_API &&
 cd ./LOCODE_REST_API &&
 cp .env-sample .env &&
@@ -8,7 +7,6 @@ composer install &&
 php bin/console doctrine:database:create &&
 php bin/console make:migration &&
 php bin/console doctrine:migrations:migrate &&
-
 crontab /var/www/symfony/LOCODE_REST_API/cronjob
 
 
