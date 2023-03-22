@@ -20,4 +20,4 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php && php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
 
-WORKDIR /var/www/symfony/LOCODE_REST_API
+WORKDIR /var/www/symfony
